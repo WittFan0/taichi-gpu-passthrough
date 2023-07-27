@@ -162,6 +162,18 @@
     <console type='pty'>
       <target type='serial' port='0'/>
     </console>
+    <input type='mouse' bus='virtio'>
+      <address type='pci' domain='0x0000' bus='0x0a' slot='0x00' function='0x0'/>
+    </input>
+    <input type='keyboard' bus='virtio'>
+      <address type='pci' domain='0x0000' bus='0x0b' slot='0x00' function='0x0'/>
+    </input>
+    <input type='evdev'>
+      <source dev='/dev/input/by-id/usb-Logitech_G9x_Laser_Mouse_933EC2BE050018-event-mouse'/>
+    </input>
+    <input type='evdev'>
+      <source dev='/dev/input/by-id/usb-Logitech_PRO_League_of_Legends_118331593536-event-kbd' grab='all' grabToggle='ctrl-ctrl' repeat='on'/>
+    </input>
     <input type='mouse' bus='ps2'/>
     <input type='keyboard' bus='ps2'/>
     <audio id='1' type='none'/>
