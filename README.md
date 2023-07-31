@@ -5,7 +5,5 @@ To restore the libvirt KVM VM, change into the taichi-gpu-passthrough project di
     sudo virsh define --file win10-passthrough.xml
 
 # To Do
-* Fix having to manually enter DNS info in guest. (related to host using systemd-resolved?)
 * Apply guest optimizations
-* Replace virtual disk with passed through SATA SSD
 * Single GPU passthrough
