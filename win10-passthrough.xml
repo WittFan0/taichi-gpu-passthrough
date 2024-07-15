@@ -26,11 +26,16 @@
       <relaxed state='on'/>
       <vapic state='on'/>
       <spinlocks state='on' retries='8191'/>
+      <vpindex state='on'/>
+      <synic state='on'/>
+      <stimer state='on'/>
+      <reset state='on'/>
+      <frequencies state='on'/>
     </hyperv>
     <vmport state='off'/>
   </features>
   <cpu mode='host-passthrough' check='none' migratable='on'>
-    <topology sockets='1' dies='1' cores='5' threads='1'/>
+    <topology sockets='1' dies='1' clusters='1' cores='5' threads='1'/>
   </cpu>
   <clock offset='localtime'>
     <timer name='rtc' tickpolicy='catchup'/>
@@ -53,13 +58,6 @@
       <target dev='vda' bus='virtio'/>
       <boot order='3'/>
       <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
-    </disk>
-    <disk type='block' device='disk'>
-      <driver name='qemu' type='raw' cache='none' discard='unmap'/>
-      <source dev='/dev/sda'/>
-      <target dev='vdb' bus='virtio'/>
-      <boot order='2'/>
-      <address type='pci' domain='0x0000' bus='0x0c' slot='0x00' function='0x0'/>
     </disk>
     <disk type='file' device='cdrom'>
       <driver name='qemu' type='raw'/>
